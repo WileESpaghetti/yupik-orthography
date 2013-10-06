@@ -4,17 +4,17 @@
 
 class YupikChar(object):
     def __init__(self, c):
-        self.ychar = c
+        self.ychar = repr(c)
 
     def __copy__(self):
-        pass
+        return YupikChar(self.ychar)
 
     def __str__(self):
-        pass
+        return self.ychar
 
     def __repr__(self):
-        pass
+        return self.ychar
 
-    def __eq__(self):
-        pass
+    def __eq__(self, other):
+        return self.__repr__() == other.__repr__()
 

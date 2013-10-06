@@ -11,8 +11,41 @@ class YupikLetter(orthography.YupikChar):
     def __init__(self, c):
         super(YupikLetter, self).__init__(c)
 
+        if isinstance(c, YupikLetter):
+            self.__pronunciation = c
+        else:
+            self.__pronunciation = None
+
+        # default letter types
+        self.__vowel = None
+        self.__prime_vowel = None
+        self.__consonant = None
+        self.__symbol = None
+        self.__valid = None
+
+        # letter classes
+        self.__stop = None
+        self.__fricative = None
+        self.__nasal = None
+
+        self.__labial = None
+        self.__velar = None
+        self.__apical = None
+
+        # default pronounciation
+        self.__voicing = None
+        self.__gemination = None
+        self.__auto_gemination = None
+        self.__rhythmic_length = None
+        self.__stress = None
+
+
     def is_vowel(self):
-        pass
+        is_vowel = self.__vowel
+        if self.__pronunciation:
+            is_vowel = self.__pronunciation.is_vowel()
+
+        return is_vowel
 
     def is_prime_vowel(self):
         pass
