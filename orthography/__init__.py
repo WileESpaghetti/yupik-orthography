@@ -3,4 +3,4 @@ from orthography.yupik_char import YupikChar
 from orthography.yupik_letter import YupikLetter
 
 from orthography.yupik_vowel import YupikVowel
-from orthography.yupik_consonant import YupikConsnant
+from orthography.yupik_consonant import YupikConsonant

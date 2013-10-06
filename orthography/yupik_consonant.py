@@ -3,10 +3,10 @@
 import orthography
 
 
-class YupikConsnant(orthography.YupikLetter):
+class YupikConsonant(orthography.YupikLetter):
     def __init__(self, c):
         # FIXME needs to thow exception if c is already a vowel
-        super(YupikConsnant, self).__init__(c)
+        super(YupikConsonant, self).__init__(c)
         self.__consonant = True
 
     def is_consonant(self):
